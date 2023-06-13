@@ -1,3 +1,4 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 .div {
   height: calc(100vh);
   scroll-snap-align: start;

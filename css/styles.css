@@ -1,0 +1,156 @@
+.div {
+  height: calc(100vh);
+  scroll-snap-align: start;
+  color: #02dd02;
+  position: relative;
+  background-image: url("/Users/romain/Documents/portfolio/img/147522.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.sec-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body{
+  font-family: 'Montserrat';
+  margin: 0;
+}
+
+.presentation{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-end;
+  font-weight: 520;
+}
+
+.sec-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+}
+
+.sec-header>h1{
+  font-size: 6rem;
+  text-align: center;
+}
+
+#cursor {
+  animation: blink 1s infinite;
+}
+
+img{
+  height: 20em;
+  opacity: 0.5;
+  clip-path: circle(50% at 50% 50%);
+  transition: opacity 0.5s, transform 1s;
+  transform: translate(-4em);
+}
+
+img:hover{
+  opacity: 1;
+  transform: translate(1em) scale(2);
+}
+
+.half-header{
+  flex-basis: 40%;
+}
+
+.half-header-r{
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+h2{font-size: 2.5em;
+  color:  #888;
+}
+
+.avatar{
+  text-align: center;
+}
+
+
+p {
+  text-align: left;
+  font-size: 2.5em;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.line1 {
+  color: #02dd02;
+  animation: type 0.5s 1s steps(20, end) forwards;
+}
+
+.cursor1 {
+  animation: blink 1s 2s 2 forwards;
+}
+
+.line2 {
+  color: #02dd02;
+  animation: type 0.5s 4.25s steps(20, end) forwards;
+}
+
+.cursor2 {
+  animation: blink 1s 5.25s 2 forwards;
+}
+
+.line3 {
+  color: #02dd02;
+  animation: type 0.5s 7.5s steps(20, end) forwards;
+}
+
+.cursor3 {
+  animation: blink 1s 8.5s 2 forwards;
+}
+
+.line4 {
+  color: #02dd02;
+  animation: type 0.5s 10.75s steps(20, end) forwards;
+}
+
+.cursor4 {
+  animation: blink 1s 8.5s infinite;
+}
+
+@keyframes type {
+  to {
+    width: 17em;
+  }
+}
+
+@keyframes blink {
+  0%{
+    opacity: 0;
+  }
+  49%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}

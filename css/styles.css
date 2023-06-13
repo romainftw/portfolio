@@ -3,7 +3,7 @@
   scroll-snap-align: start;
   color: #02dd02;
   position: relative;
-  background-image: url("/Users/romain/Documents/portfolio/img/147522.jpg");
+  background-image: url("../img/147522.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;

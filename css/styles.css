@@ -14,7 +14,7 @@
   color: #02dd02;
 }
 .div_two {
-  height: calc(100vh);
+  min-height: 100vh;
   scroll-snap-align: start;
   color: #02dd02;
   position: relative;
@@ -26,10 +26,10 @@
   font-family: 'Courier New', Courier, monospace;
 }
 .div_three {
-  height: calc(200vh);
+  min-height: 100vh;
   scroll-snap-align: start;
   color: #02dd02;
-  position: relative;
+  position: static;
   background-image: url("../img/draw.jpeg");
   background-attachment: fixed;
   background-size: cover;
@@ -54,6 +54,7 @@ body{
 }
 
 .sec-header{
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

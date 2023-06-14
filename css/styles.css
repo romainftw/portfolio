@@ -10,6 +10,21 @@
   background-position: center center;
   font-family: 'Courier New', Courier, monospace;
 }
+.content>p{
+  color: #02dd02;
+}
+.div_two {
+  height: calc(100vh);
+  scroll-snap-align: start;
+  color: #02dd02;
+  position: relative;
+  background-image: url("../img/2421274.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: 'Courier New', Courier, monospace;
+}
 
 .sec-header{
   display: flex;
@@ -85,7 +100,7 @@ h2{font-size: 2.5em;
 }
 
 
-p {
+.half-header-r>p {
   text-align: left;
   font-size: 2.5em;
   font-family: monospace;

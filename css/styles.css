@@ -19,6 +19,7 @@
 
 body{
   font-family: 'Montserrat';
+  background-color: rgb(22, 22, 22);
   margin: 0;
 }
 
@@ -153,4 +154,13 @@ span {
   100%{
     opacity: 1;
   }
+}
+
+.navbar{
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.navbar-brand{
+  padding-left: 20px;
+  color: #02dd02;
 }

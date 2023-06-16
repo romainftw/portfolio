@@ -37,13 +37,14 @@
       console.log('Erreur lors du chargement de skill.html :', error);
     }
     );
-    const imageContainer = document.querySelector('.image-container');
-    const progressBar = document.querySelector('.progress-bar');
-
-    imageContainer.addEventListener('mouseover', () => {
-      progressBar.style.width = '100%'; // Ajustez la valeur pour définir jusqu'où la barre de progression doit avancer
-    });
-
-    imageContainer.addEventListener('mouseout', () => {
-      progressBar.style.width = '0';
+    $(".meter > span").each(function () {
+      $(this)
+        .data("origWidth", $(this).width())
+        .width(0)
+        .animate(
+          {
+            width: $(this).data("origWidth")
+          },
+          1200
+        );
     });

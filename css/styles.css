@@ -57,7 +57,7 @@ body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
     top: 0;
     left: 0;
     height: 100%;
@@ -76,7 +76,7 @@ body{
   animation: blink 1s infinite;
 }
 
-.avatar>img{
+.avatar_left>img{
   height: 20em;
   opacity: 0.5;
   clip-path: circle(50% at 50% 50%);
@@ -84,6 +84,22 @@ body{
   transform: translate(-4em);
 }
 
+
+.avatar_center>img{
+  height: 20em;
+  opacity: 0.5;
+  clip-path: circle(50% at 50% 50%);
+  transition: opacity 0.5s, transform 1s;
+  transform: translate(0em);
+}
+
+.avatar_right>img{
+  height: 20em;
+  opacity: 0.5;
+  clip-path: circle(50% at 50% 50%);
+  transition: opacity 0.5s, transform 1s;
+  transform: translate(4em);
+}
 img:hover{
   opacity: 1;
   transform: translate(1em) scale(2);
@@ -219,35 +235,122 @@ span {
 .nav-item {
   width: 200px; /* Ajustez la largeur selon vos besoins */
 }
+.coll h1 {
+  margin-top: 35px;
+  font-size: 6rem;
+  text-align: center;
+}
 
-.image-container {
-  max-width: 100%;
-  max-height: 100%;
+.meter {
+  box-sizing: content-box;
+  height: 20px; /* Can be anything */
+  position: relative;
+  margin: 60px auto 20px auto; /* Remplacez le margin-top et le margin-bottom par "auto" */
+  width: 80%; /* Ajoutez une largeur fixe ou utilisez une autre méthode pour définir la largeur souhaitée */
+
+  background: #555;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgb(43, 194, 83);
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43, 194, 83) 37%,
+    rgb(84, 240, 84) 69%
+  );
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
   position: relative;
   overflow: hidden;
-  margin-right: 1em; /* Ajoutez cette ligne pour décaler l'image vers la droite */
 }
-
-.image-container img {
+.meter > span:after,
+.animate > span > span {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: auto;
-}
-
-.progress-bar {
-  position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  width: 0;
-  height: 20em; /* Ajustez la hauteur de la barre de progression */
-  background-color: blue; /* Couleur de la barre de progression */
-  transition: width 0.3s ease-in-out; /* Animation de la progression */
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  z-index: 1;
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
 }
 
-.image-container:hover .progress-bar {
-  opacity: 1;
-  transform: translate(1em) scale(2);
+.animate > span:after {
+  display: none;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+.orange > span {
+  background-image: linear-gradient(#f1a165, #f36d0a);
+}
+
+.red > span {
+  background-image: linear-gradient(#f0a3a3, #f42323);
+}
+
+.nostripes > span > span,
+.nostripes > span::after {
+  background-image: none;
+}
+
+.meter > span.reverse:after,
+.animate > span.reverse > span {
+  background-position: 100% 0;
+}
+
+#page-wrap {
+  width: 490px;
+  margin: 80px auto;
+}
+body {
+  background: #333;
+  text-align: center;
+  color: #eee;
+  font-family: system-ui, sans-serif;
+}
+h1 {
+  font-size: 42px;
+  font-weight: 600;
+  margin: 0 0 30px;
+}
+pre {
+  background: #000;
+  text-align: left;
+  padding: 20px;
+  margin: 0 auto 30px;
+}
+* {
+  box-sizing: border-box;
 }

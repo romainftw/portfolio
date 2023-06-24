@@ -1,3 +1,7 @@
+@import url('navbar.css');
+@import url('load_bar.css');
+@import url('variable.css');
+
 .div {
   height: calc(100vh);
   scroll-snap-align: start;
@@ -10,21 +14,24 @@
   background-position: center center;
   font-family: 'Courier New', Courier, monospace;
 }
+
 .content>p{
   color: #02dd02;
 }
+
 .div_two {
   min-height: 100vh;
   scroll-snap-align: start;
   color: #02dd02;
   position: relative;
-  background-image: url("../img/2421274.jpg");
+  background-image: url("../img/backgrd.jpeg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   font-family: 'Courier New', Courier, monospace;
 }
+
 .div_three {
   min-height: 100vh;
   scroll-snap-align: start;
@@ -77,11 +84,12 @@ body{
 }
 
 .avatar_left>img{
-  height: 20em;
+  height: 15em;
   opacity: 0.5;
   clip-path: circle(50% at 50% 50%);
   transition: opacity 0.5s, transform 1s;
   transform: translate(-4em);
+  z-index: 1;
 }
 
 
@@ -91,18 +99,20 @@ body{
   clip-path: circle(50% at 50% 50%);
   transition: opacity 0.5s, transform 1s;
   transform: translate(0em);
+  z-index: 1;
 }
 
 .avatar_right>img{
-  height: 20em;
+  height: 15em;
   opacity: 0.5;
   clip-path: circle(50% at 50% 50%);
   transition: opacity 0.5s, transform 1s;
   transform: translate(4em);
+  z-index: 1;
 }
 img:hover{
   opacity: 1;
-  transform: translate(1em) scale(2);
+  transform: translate(1em) scale(1.2);
 }
 
 .half-header{
@@ -145,34 +155,34 @@ span {
 }
 
 .cursor1 {
-  animation: blink 1s 2s 2 forwards;
+  animation: blink 1s 1s 2 forwards;
 }
 
 .line2 {
   color: #02dd02;
-  animation: type 0.5s 4.25s steps(20, end) forwards;
+  animation: type 0.5s 2s steps(20, end) forwards;
 }
 
 .cursor2 {
-  animation: blink 1s 5.25s 2 forwards;
+  animation: blink 1s 2s 2 forwards;
 }
 
 .line3 {
   color: #02dd02;
-  animation: type 0.5s 7.5s steps(20, end) forwards;
+  animation: type 0.5s 3s steps(20, end) forwards;
 }
 
 .cursor3 {
-  animation: blink 1s 8.5s 2 forwards;
+  animation: blink 1s 3s 2 forwards;
 }
 
 .line4 {
   color: #02dd02;
-  animation: type 0.5s 10.75s steps(20, end) forwards;
+  animation: type 0.5s 4s steps(20, end) forwards;
 }
 
 .cursor4 {
-  animation: blink 1s 8.5s infinite;
+  animation: blink 1s s infinite;
 }
 
 @keyframes type {
@@ -196,144 +206,12 @@ span {
   }
 }
 
-.navbar{
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background-color:rgba(71, 71, 71, 0.6);
-}
-.navbar-brand{
-  padding-left: 20px;
-  color: #f4f7f4;
-  transition: 0.5s cubic-bezier(0.6, 0.03, 0.28, 0.98);
-  transform: scale(1);
-}
-.navbar-brand:hover{
-  color: #0b0b0b;
-  transform: scale(1.2);
-  transition: 0.5s cubic-bezier(0.6, 0.03, 0.28, 0.98);
-}
-.nav-link{
-  color: #f5f7f5;
-}
-.navbar-text{
-  color: #0e120e;
-  margin-left: 55%;
-}
-@media (max-width: 767px) {
-  .navbar-nav .nav-link {
-    font-size: 16px; /* Ajustez la taille du texte selon vos besoins */
-  }
-}
-.navbar-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.navbar-collapse{
-  justify-content: center;
-}
-.nav-item {
-  width: 200px; /* Ajustez la largeur selon vos besoins */
-}
 .coll h1 {
   margin-top: 35px;
   font-size: 6rem;
   text-align: center;
 }
 
-.meter {
-  box-sizing: content-box;
-  height: 20px; /* Can be anything */
-  position: relative;
-  margin: 60px auto 20px auto; /* Remplacez le margin-top et le margin-bottom par "auto" */
-  width: 80%; /* Ajoutez une largeur fixe ou utilisez une autre méthode pour définir la largeur souhaitée */
-
-  background: #555;
-  border-radius: 25px;
-  padding: 10px;
-  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
-}
-.meter > span {
-  display: block;
-  height: 100%;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background-color: rgb(43, 194, 83);
-  background-image: linear-gradient(
-    center bottom,
-    rgb(43, 194, 83) 37%,
-    rgb(84, 240, 84) 69%
-  );
-  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
-    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
-  position: relative;
-  overflow: hidden;
-}
-.meter > span:after,
-.animate > span > span {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-image: linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 0.2) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0.2) 75%,
-    transparent 75%,
-    transparent
-  );
-  z-index: 1;
-  background-size: 50px 50px;
-  animation: move 2s linear infinite;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  overflow: hidden;
-}
-
-.animate > span:after {
-  display: none;
-}
-
-@keyframes move {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 50px 50px;
-  }
-}
-
-.orange > span {
-  background-image: linear-gradient(#f1a165, #f36d0a);
-}
-
-.red > span {
-  background-image: linear-gradient(#f0a3a3, #f42323);
-}
-
-.nostripes > span > span,
-.nostripes > span::after {
-  background-image: none;
-}
-
-.meter > span.reverse:after,
-.animate > span.reverse > span {
-  background-position: 100% 0;
-}
-
-#page-wrap {
-  width: 490px;
-  margin: 80px auto;
-}
 body {
   background: #333;
   text-align: center;
@@ -353,4 +231,37 @@ pre {
 }
 * {
   box-sizing: border-box;
+}
+
+#myProgress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#myProgress p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.custom-row {
+  position: relative;
+}
+
+.custom-row::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px; /* Décalez légèrement l'ombre vers le bas */
+  width: 100%;
+  height: 10px; /* Ajustez la hauteur de l'ombre */
+  background-color: rgba(255, 255, 255, 0.5); /* Couleur de l'ombre avec une opacité réduite */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.custom-row:hover::after {
+  opacity: 1;
+  margin-bottom: -10px; /* Ajoutez une marge négative pour que l'ombre s'étende vers le bas */
 }

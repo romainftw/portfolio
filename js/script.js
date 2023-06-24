@@ -1,5 +1,6 @@
 
-    fetch('public/navbar.html') // Utilisez le chemin relatif du fichier home.html à partir de l'emplacement de index.html
+    /* fetch navbar */
+    fetch('public/navbar.html')
       .then(response => response.text())
       .then(data => {
         const section1Container = document.getElementById('nav-container');
@@ -8,7 +9,8 @@
       .catch(error => {
         console.log('Erreur lors du chargement de navbar.html :', error);
       });
-  fetch('public/home.html') // Utilisez le chemin relatif du fichier home.html à partir de l'emplacement de index.html
+    /* fetch home */
+  fetch('public/home.html')
     .then(response => response.text())
     .then(data => {
       const section1Container = document.getElementById('home-container');
@@ -17,7 +19,8 @@
     .catch(error => {
       console.log('Erreur lors du chargement de home.html :', error);
     });
-  fetch('public/about_me.html') // Utilisez le chemin relatif du fichier about.html à partir de l'emplacement de index.html
+    /* fetch about_me */
+  fetch('public/about_me.html')
     .then(response => response.text())
     .then(data => {
       const section2Container = document.getElementById('about-container');
@@ -27,7 +30,8 @@
       console.log('Erreur lors du chargement de about.html :', error);
     }
     );
-    fetch('public/skill.html') // Utilisez le chemin relatif du fichier about.html à partir de l'emplacement de index.html
+    /* fetch skill */
+    fetch('public/skill.html')
     .then(response => response.text())
     .then(data => {
       const section2Container = document.getElementById('skill-container');
@@ -37,6 +41,8 @@
       console.log('Erreur lors du chargement de skill.html :', error);
     }
     );
+
+    /* loading */
     $(".meter > span").each(function () {
       $(this)
         .data("origWidth", $(this).width())

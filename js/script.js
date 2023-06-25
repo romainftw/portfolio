@@ -41,6 +41,29 @@
       console.log('Erreur lors du chargement de skill.html :', error);
     }
     );
+    /* fetch footer */
+    fetch('public/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      const section2Container = document.getElementById('footer-container');
+      section2Container.innerHTML = data;
+    }
+    ) .catch(error => {
+      console.log('Erreur lors du chargement de skill.html :', error);
+    }
+    );
+
+        /* fetch fix icon */
+        fetch('public/social_media_fix.html')
+        .then(response => response.text())
+        .then(data => {
+          const section2Container = document.getElementById('social_media_fix');
+          section2Container.innerHTML = data;
+        }
+        ) .catch(error => {
+          console.log('Erreur lors du chargement de skill.html :', error);
+        }
+        );
 
     /* loading */
     $(".meter > span").each(function () {

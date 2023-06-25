@@ -1,0 +1,112 @@
+.timeline-container {
+  width: 80%;
+  padding: 50px 0;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+}
+.timeline-container:before { /*This is the line down the middle*/
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 100%;
+  background: #8dd8e1;
+  z-index: 1
+}
+.timeline-block {
+  width: -webkit-calc(50% + 8px);
+  width: -moz-calc(50% + 8px);
+  width: calc(50% + 8px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  clear: both;
+}
+.timeline-block-right {
+  float: right;
+}
+.timeline-block-left {
+  float: left;
+  direction: rtl
+}
+.marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #f303df;
+  background: #00e1ff;
+  margin-top: 10px;
+  z-index: 9999
+}
+.timeline-content {
+  width: 95%;
+  padding: 0 15px;
+  color: #01ffea
+}
+.timeline-content h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 500
+}
+.timeline-content span {
+  font-size: 16px;
+  color: #a4a4a4;
+}
+.timeline-content p {
+  font-size: 15px;
+  line-height: 1.5em;
+  word-spacing: 1px;
+  color: #ffffff;
+}
+.abouthcolor {
+  text-shadow:  white 0.006em 0.006em 0.007em,
+  #00e1ff 1px 1px 1px,
+  #00c9f5 1px 2px 1px,
+  #00b1ec 1px 3px 1px,
+  #0099e2 1px 4px 1px,
+  #0081d9 1px 5px 1px,
+  #0069cf 1px 6px 1px,
+  #0051c5 1px 7px 1px,
+  #0039bb 1px 8px 1px,
+  #0021b2 1px 9px 1px,
+  #0009a8 1px 10px 1px,
+  #f303df 1px 11px 1px,
+  #f303df 1px 12px 1px;
+color: #fff;
+
+}
+@media screen and (max-width: 768px) {
+  .timeline-container:before {
+     left: 8px;
+     width: 2px;
+  }
+  .timeline-block {
+     width: 100%;
+     margin-bottom: 30px;
+  }
+  .timeline-block-right {
+     float: none;
+  }
+  .timeline-block-left {
+     float: none;
+     direction: ltr;
+  }
+}
+
+.no-bullets {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.no-bullets li {
+  margin-left: 0;
+}

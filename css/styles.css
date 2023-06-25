@@ -1,13 +1,14 @@
 @import url('navbar.css');
 @import url('load_bar.css');
-@import url('variable.css');
+@import url('about_me.css');
+@import url('footer.css');
 
 .div {
   height: calc(100vh);
   scroll-snap-align: start;
   color: #02dd02;
   position: relative;
-  background-image: url("../img/147522.jpg");
+  background-image: url("../img/backgrd.jpeg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,7 +25,7 @@
   scroll-snap-align: start;
   color: #02dd02;
   position: relative;
-  background-image: url("../img/backgrd.jpeg");
+  background-image: url("../img/backskill.jpeg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,9 +36,9 @@
 .div_three {
   min-height: 100vh;
   scroll-snap-align: start;
-  color: #02dd02;
+  color: #fbfcfb;
   position: static;
-  background-image: url("../img/draw.jpeg");
+  background-image: url("../img/backgskill.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -127,8 +128,9 @@ img:hover{
 }
 
 h2{font-size: 2.5em;
-  color:  #888;
+  color:  #ef43e9;
 }
+
 
 .avatar{
   text-align: center;
@@ -245,23 +247,36 @@ pre {
   text-align: center;
 }
 
-.custom-row {
-  position: relative;
+.colorhskill {
+  text-shadow:#ff006e 2.5px 2.5px 0,
+#8338ec 5px 5px 0,
+#3a86ff 7.5px 7.5px 0,
+#333 10px 10px 10px;color:#ffcc00;
 }
 
-.custom-row::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px; /* Décalez légèrement l'ombre vers le bas */
-  width: 100%;
-  height: 10px; /* Ajustez la hauteur de l'ombre */
-  background-color: rgba(255, 255, 255, 0.5); /* Couleur de l'ombre avec une opacité réduite */
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.custom-row:hover::after {
-  opacity: 1;
-  margin-bottom: -10px; /* Ajoutez une marge négative pour que l'ombre s'étende vers le bas */
+.social-icon {
+  margin-top: 10px;
+}
+
+.github-icon a,
+.linkedin-icon a {
+  display: inline-block;
+  color: #f009dd;
+  font-size: 30px;
+  margin-right: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.github-icon a:hover,
+.linkedin-icon a:hover {
+  color: #00ffff; /* Update with the desired hover color */
 }
